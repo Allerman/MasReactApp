@@ -7,11 +7,10 @@ import TopBar from './components/topBar';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <TopBar />
+    <View style={styles.containerApp}>
+      <TopBar/>
       <Mapa/>
       <Botoes/>
-      {/* Adicione aqui outros componentes do seu aplicativo */}
     </View>
   );
 }

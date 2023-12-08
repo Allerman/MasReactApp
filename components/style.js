@@ -2,11 +2,14 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
+  containerApp: {
+    flex: 2,
+  },
   container: {
     flex: 1,
   },
   map: {
-    ...StyleSheet.absoluteFillObject, // Use absolute fill to take the entire space
+    ...StyleSheet.absoluteFillObject, 
     zIndex: 1,
   },
   header: {
@@ -15,7 +18,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#004A2F',
     padding: 10,
-    zIndex: 2, // Adjust the zIndex to make the header appear above the map
+    zIndex: 2, 
   },
   iconButton: {
     padding: 10,
@@ -50,10 +53,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   bottomButtons: {
-    position: 'absolute', // Define a posição absoluta para que os botões possam flutuar sobre o mapa
-    bottom: 16, // Ajusta a distância do fundo da tela
-    left: 0, // Alinha à esquerda
-    right: 0, // Alinha à direita
+    position: 'absolute',
+    bottom: 16, 
+    left: 0,
+    right: 0, 
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 16,
