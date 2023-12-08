@@ -4,13 +4,14 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   containerApp: {
     flex: 2,
+    zIndex: 4,
   },
   container: {
     flex: 1,
+    zIndex: 1,
   },
   map: {
     ...StyleSheet.absoluteFillObject, 
-    zIndex: 1,
   },
   header: {
     flexDirection: 'row',
@@ -60,6 +61,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 16,
+    zIndex: 4,
   },
   button: {
     backgroundColor: '#004A2F',
