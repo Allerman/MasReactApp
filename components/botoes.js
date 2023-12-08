@@ -13,7 +13,7 @@ const Botoes = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.containerButton}>
       <View style={styles.bottomButtons}>
         <TouchableOpacity style={styles.button} onPress={abrirDenuncia}>
           <Text style={styles.buttonText}>Abrir Denúncia</Text>

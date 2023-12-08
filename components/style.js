@@ -2,10 +2,6 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  containerInicial: {
-    flex: 1,
-    backgroundColor: '#fff', // ou outra cor de fundo desejada
-  },
   container: {
     flex: 1,
   },
@@ -54,18 +50,21 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   bottomButtons: {
+    position: 'absolute', // Define a posição absoluta para que os botões possam flutuar sobre o mapa
+    bottom: 16, // Ajusta a distância do fundo da tela
+    left: 0, // Alinha à esquerda
+    right: 0, // Alinha à direita
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 16,
-    backgroundColor: '#fff', // Cor de fundo dos botões
   },
   button: {
-    backgroundColor: '#007bff', // Cor do botão
+    backgroundColor: '#004A2F',
     padding: 10,
     borderRadius: 8,
   },
   buttonText: {
-    color: '#fff', // Cor do texto do botão
+    color: '#fff',
     fontWeight: 'bold',
   },
 });
