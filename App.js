@@ -1,5 +1,5 @@
 import React from 'react';
-import Botoes from 'Botoes';
+import Botoes from './components/botoes';
 import styles from './components/style';
 import Mapa from './components/mapa';
 import { View } from 'react-native';
