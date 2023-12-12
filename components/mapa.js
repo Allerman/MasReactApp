@@ -35,7 +35,6 @@ const Mapa = () => {
       <Marker
         coordinate={localizacaoDenuncia}
         title="Local da Denúncia"
-        description="Descrição da Denúncia"
         pinColor="red" // Cor do marcador (pino)
       />
     );

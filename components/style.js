@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   },
   map: {
     ...StyleSheet.absoluteFillObject, 
+    zIndex: 1,
   },
   header: {
     flexDirection: 'row',
@@ -61,17 +62,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 16,
-    zIndex: 4,
   },
   button: {
     backgroundColor: '#004A2F',
     padding: 10,
     borderRadius: 8,
   },
-  buttonText: {
-    color: '#fff',
-    fontWeight: 'bold',
+  buttonText:{
+    color: '#F0F8FF',
   },
+  input:{
+    padding: 8,
+  },
+
 });
 
 export default styles;
