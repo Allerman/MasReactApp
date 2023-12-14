@@ -4,13 +4,13 @@ import { Card } from 'react-native-elements';
 
 const Sobre = () => {
   const equipe = [
-    { nome: 'Membro 1', foto: require('../assets/thayssa.jpeg') },
-    { nome: 'Membro 2', foto: require('../assets/alexandre.jpg') },
-    { nome: 'Membro 3', foto: require('../assets/diana.jpeg') },
-    { nome: 'Membro 4', foto: require('../assets/gabriela.jpeg') },
-    { nome: 'Membro 5', foto: require('../assets/mateus.jpeg') },
-    { nome: 'Membro 6', foto: require('../assets/pedro.jpg') },
-    { nome: 'Membro 7', foto: require('../assets/vinicius.jpg') },
+    { nome: 'Alexandre Maranhão', foto: require('../assets/alexandre.jpg') },
+    { nome: 'Diana Rafaela', foto: require('../assets/diana.jpeg') },
+    { nome: 'Gabriela Souza', foto: require('../assets/gabriela.jpeg') },
+    { nome: 'Mateus Vieira', foto: require('../assets/mateus.jpeg') },
+    { nome: 'Pedro Balder', foto: require('../assets/pedro.jpg') },
+    { nome: 'Thayssa Alexandre', foto: require('../assets/thayssa.jpeg') },
+    { nome: 'Vinicius Souza ', foto: require('../assets/vinicius.jpg') },
   ];
 
  
