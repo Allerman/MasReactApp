@@ -144,10 +144,34 @@ const Createdenuncia = () => {
       </TouchableOpacity>
 
       {/* Novos campos para exibir os dados obtidos da localização */}
-      <Text style={{ marginVertical: 10 }}>Rua: {road}</Text>
-      <Text style={{ marginVertical: 10 }}>Bairro: {suburb}</Text>
-      <Text style={{ marginVertical: 10 }}>Cidade: {city}</Text>
-      <Text style={{ marginVertical: 10 }}>Estado: {state}</Text>
+      <Text style={{ marginVertical: 10,width: '80%',
+          height: 40,
+          borderColor: '#004A2F',
+          borderWidth: 2,
+          borderRadius: 10,
+          padding: 10,
+          marginVertical: 10, }}>Rua: {road}</Text>
+      <Text style={{ marginVertical: 10, width: '80%',
+          height: 40,
+          borderColor: '#004A2F',
+          borderWidth: 2,
+          borderRadius: 10,
+          padding: 10,
+          marginVertical: 10,}}>Bairro: {suburb}</Text>
+      <Text style={{ marginVertical: 10, width: '80%',
+          height: 40,
+          borderColor: '#004A2F',
+          borderWidth: 2,
+          borderRadius: 10,
+          padding: 10,
+          marginVertical: 10,}}>Cidade: {city}</Text>
+      <Text style={{ marginVertical: 10, width: '80%',
+          height: 40,
+          borderColor: '#004A2F',
+          borderWidth: 2,
+          borderRadius: 10,
+          padding: 10,
+          marginVertical: 10,}}>Estado: {state}</Text>
 
       {title && text && address && (
         <TouchableOpacity
