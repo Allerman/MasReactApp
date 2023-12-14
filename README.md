@@ -9,9 +9,8 @@ preservação do meio ambiente.
 - [Introdução](#introdução)
 - [Funcionalidades](#funcionalidades)
 - [Instalação](#instalação)
-- [Configuração do Backend](#configuração_do_backend)
-- [Como Usar](#como_usar)
-- [Equipe](#equipe)
+- [Configuração do Backend](#configuraçãodobackend)
+- [Como Usar](#comousar)
 
 
 ## Introdução
