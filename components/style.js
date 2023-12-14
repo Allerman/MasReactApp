@@ -3,14 +3,14 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   containerApp: {
-    flex: 2,
+    flex: 1,
     zIndex: 4,
   },
   container: {
     flex: 1,
     zIndex: 1,
   },
-  map: {
+  mapa: {
     ...StyleSheet.absoluteFillObject, 
     zIndex: 1,
   },

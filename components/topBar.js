@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import styles from './style';
-import { View, Text, TouchableOpacity, } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
 
 const TopBar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [userMenuVisible, setUserMenuVisible] = useState(false);
 
-  const pages = ['Mapa', 'Fazer Denuncia', 'Denuncias', 'Ligar Para Ibama', 'Ajuda', 'Sobre'];
-  const settings = ['Logout'];
+  const navigation = useNavigation();
+
+  const pages = ['Mapa','Fazer Denuncia', 'Denuncias', 'Sobre'];
 
   const handleOpenNavMenu = () => {
     setMenuVisible(!menuVisible);
@@ -26,6 +28,11 @@ const TopBar = () => {
     setUserMenuVisible(false);
   };
 
+  const handleNavigateToPage = (page) => {
+    navigation.navigate(page);
+    handleCloseNavMenu();
+  };
+
   return (
     <View style={styles.header}>
       <TouchableOpacity onPress={handleOpenNavMenu} style={styles.iconButton}>
@@ -34,14 +41,10 @@ const TopBar = () => {
 
       <Text style={styles.logoText}>MAS</Text>
 
-      <TouchableOpacity onPress={handleOpenUserMenu} style={styles.iconButton}>
-        <Icon name="account-circle" size={30} color="#fff" />
-      </TouchableOpacity>
-
       {menuVisible && (
         <View style={styles.menu}>
           {pages.map((page) => (
-            <TouchableOpacity key={page} onPress={handleCloseNavMenu} style={styles.menuItem}>
+            <TouchableOpacity key={page} onPress={() => handleNavigateToPage(page)} style={styles.menuItem}>
               <Text style={styles.menuText}>{page}</Text>
             </TouchableOpacity>
           ))}
@@ -60,6 +63,5 @@ const TopBar = () => {
     </View>
   );
 };
-
 
 export default TopBar;
