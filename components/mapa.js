@@ -37,19 +37,19 @@ const Mapa = () => {
     fetchDenuncias();
   }, []);
 
-  // // Função para adicionar marcadores para cada denúncia
-  // const adicionarMarcadoresDenuncias = () => {
-  //   return denuncias.map((denuncia) => (
-  //     <Marker
-  //       key={denuncia._id} // Certifique-se de ter um identificador único para cada marcador
-  //       coordinate={{
-  //         latitude: denuncia.localizacao.coordinates[0],
-  //         longitude: denuncia.localizacao.coordinates[1],
-  //       }}
-  //       title={denuncia.titulo}
-  //     />
-  //   ));
-  // };
+  // Função para adicionar marcadores para cada denúncia
+  const adicionarMarcadoresDenuncias = () => {
+    return denuncias.map((denuncia) => (
+      <Marker
+        key={denuncia._id}
+        coordinate={{
+          latitude: denuncia.localizacao.coordinates[0],
+          longitude: denuncia.localizacao.coordinates[1],
+        }}
+        title={denuncia.titulo}
+      />
+    ));
+  };
 
   return (
     <View style={styles.container}>
@@ -73,7 +73,7 @@ const Mapa = () => {
           />
 
           {/* Chamada da função para adicionar os marcadores das denúncias */}
-          {/* {adicionarMarcadoresDenuncias()} */}
+          {adicionarMarcadoresDenuncias()}
         </MapView>
       )}
     </View>

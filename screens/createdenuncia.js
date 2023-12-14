@@ -52,12 +52,11 @@ const Createdenuncia = () => {
 
   const submitDenuncia = async () => {
     try {
-    
       if (!title || !text || !address || !denunciaLocation) {
         console.error('Por favor, preencha todos os campos antes de enviar a denúncia.');
         return;
       }
-
+  
       const formData = {
         titulo: title,
         descricao: text,
@@ -70,13 +69,22 @@ const Createdenuncia = () => {
           state,
         },
       };
-
+  
       // Fazer a requisição POST para criar uma nova denúncia
       const response = await novadenuncia.post('/novadenuncia', formData);
-
+  
       if (response.status === 201) {
         console.log('Denúncia enviada com sucesso');
-        // (Adicionar qualquer lógica adicional após o envio bem-sucedido)
+  
+        // Limpar os campos após o envio bem-sucedido
+        setTitle('');
+        setText('');
+        setRoad('');
+        setSuburb('');
+        setCity('');
+        setState('');
+        setAddress('');
+        setDenunciaLocation(null);
       } else {
         console.error('Erro ao criar denúncia:', response.data.error);
       }
