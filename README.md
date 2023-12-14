@@ -36,7 +36,7 @@ resolução desses problemas.
 
     bash
 
-    git clone https://github.com/seu-usuario/MAS-App.git
+    git@github.com:Allerman/MasReactApp.git
 
 ### Instale as dependências:
 
@@ -53,7 +53,7 @@ resolução desses problemas.
 ## Configuração do Backend
 
 O backend é construído em Node.js. Certifique-se de ter o Node.js instalado.
-Acesse o diretorio do backend e siga as instruções no README para configurar e iniciar o servidor.
+Acesse o diretorio do [backend](https://github.com/Allerman/masReactAppBack) para configurar e iniciar o servidor.
 
 ## Como Usar
 
