@@ -3,6 +3,7 @@ import styles from './style';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
+import { Linking } from 'react-native';
 
 const TopBar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -10,7 +11,7 @@ const TopBar = () => {
 
   const navigation = useNavigation();
 
-  const pages = ['Mapa','Fazer Denuncia', 'Denuncias', 'Sobre'];
+  const pages = ['Mapa', 'Fazer Denuncia','Ligar para Ibama', 'Denuncias', 'Sobre'];
 
   const handleOpenNavMenu = () => {
     setMenuVisible(!menuVisible);
@@ -29,8 +30,16 @@ const TopBar = () => {
   };
 
   const handleNavigateToPage = (page) => {
-    navigation.navigate(page);
+    if (page === 'Ligar para Ibama') {
+      handleIbamaCall();
+    } else {
+      navigation.navigate(page);
+    }
     handleCloseNavMenu();
+  };
+
+  const handleIbamaCall = () => {
+    Linking.openURL('tel:08000618080');
   };
 
   return (
